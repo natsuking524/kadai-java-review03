@@ -1,13 +1,45 @@
 package jp.co.baseball;
 
 public class BaseBallTeam {
-    public String name;
-    public int win;
-    public int lose;
-    public int draw;
+    private String name;
+    private int win;
+    private int lose;
+    private int draw;
 
     public BaseBallTeam() {
 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getWin() {
+        return win;
+    }
+
+    public void setWin(int win) {
+        this.win = win;
+    }
+
+    public int getLose() {
+        return lose;
+    }
+
+    public void setLose(int lose) {
+        this.lose = lose;
+    }
+
+    public int getDraw() {
+        return draw;
+    }
+
+    public void setDraw(int draw) {
+        this.draw = draw;
     }
 
     public BaseBallTeam(String name, int win, int lose, int draw) {
@@ -18,10 +50,8 @@ public class BaseBallTeam {
     }
 
     public double getRate() {
-        double sum;
-        sum = this.win + this.lose;
-        double rate;
-        rate = this.win / sum;
+        double sum = this.win + this.lose;
+        double rate = this.win / sum;
         return rate;
     }
 
